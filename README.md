@@ -1,12 +1,19 @@
-# React + Vite
+# 🌱 CarbonApp – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação **React + Vite** que implementa a interface do CarbonApp, uma PWA de recompensas por ações sustentáveis.  
+Usuários podem registrar ações como reciclagem, plantio e transporte verde e receber **EcoPontos**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)  
+- [TailwindCSS](https://tailwindcss.com/)  
+- PWA (manifest.json + service worker)  
+- [Mapbox](https://www.mapbox.com/) para mapa comunitário  
+- Deploy sugerido: [Vercel](https://vercel.com/)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Estrutura de pastas
+
