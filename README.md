@@ -70,9 +70,4 @@ MIT
 
 ---
 
-### 🔹 Próximo passo
 
-1. Salve esse conteúdo no `README.md`, **substituindo o antigo**.  
-2. Adicione o arquivo ao Git:
-```powershell
-git add README.md
