@@ -1,66 +1,84 @@
-import "./style.css"
-import { FaUser, FaLock, FaLeaf} from "react-icons/fa";
+import "./style.css";
+import { FaUser, FaLock, FaLeaf } from "react-icons/fa";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../img/log.png";
 
-
 function Login() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const navigate = useNavigate();
+
+  async function handleLogin(e) {
+    e.preventDefault();
+
+    const res = await fetch("http://localhost:3000/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password: senha })
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      localStorage.setItem("usuarioId", data.usuarioId); // ou token, se preferir
+      navigate("/Home");
+    } else {
+      alert(data.error || "Erro ao fazer login");
+    }
+  }
 
   return (
-    <div className="container">  
-      <form>
-
-        <div class="logo">
-            <div class="imagem-login">
-
-              <h1><FaLeaf className="Leaf"/> Ecopoints</h1>
-
-              <p>Bem-vindo de volta à sua jornada rumo a um futuro sustentável. <br/>Cada pequena ação cria uma onda de mudança positiva.</p>
-
-            </div>
+    <div className="container">
+      <form onSubmit={handleLogin}>
+        <div className="logo">
+          <div className="imagem-login">
+            <h1><FaLeaf className="Leaf" /> Ecopoints</h1>
+            <p>
+              Bem-vindo de volta à sua jornada rumo a um futuro sustentável. <br />
+              Cada pequena ação cria uma onda de mudança positiva.
+            </p>
+          </div>
         </div>
 
-          <h1>Tela de login</h1>
-          <p>
-            acesse para continuar na sua eco-jornada
-          </p>
-          
-          <div>
+        <h1>Tela de login</h1>
+        <p>acesse para continuar na sua eco-jornada</p>
 
-            <input type="email" placeholder="E-mail" />
-            <FaUser className="icon"/>
-            
-          </div>
-          <div>
+        <div>
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <FaUser className="icon" />
+        </div>
 
-            <input type="password" placeholder="Senha" />
-            <FaLock className="icon"/>
+        <div>
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+          <FaLock className="icon" />
+        </div>
 
-          </div>
-          
-          <div>
+        <div>
+          <label>
+            <input type="checkbox" />
+            Lembre de mim
+          </label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
 
-            <label>
-              <input type="checkbox" />
-              Lembre de mim
-            </label>
+        <button type="submit">Entrar</button>
 
-            <a href="#"> Esqueceu a senha?</a>
-
-          </div>
-
-          <button>Entrar</button>
-
-          <div className="link-cad">
-
-            <p>Não tem uma conta? <a href="/Cadastro">Registrar</a></p>
-
-          </div>
-        
+        <div className="link-cad">
+          <p>Não tem uma conta? <a href="/Cadastro">Registrar</a></p>
+        </div>
       </form>
-      
     </div>
-  
-
   );
 }
+
 export default Login;
