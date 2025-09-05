@@ -1,17 +1,22 @@
+import React from "react";
 import Header from "../../componentes/Header/Header";
-import "./style.css"
 
-function Home() {
+
+import "./style.css"
+import Inicio from "./Inicio/inicio";
+
+function Dashboard() {
   return (
     <div className="container-header">
       <Header/>
+      <Inicio/>
 
       <div className="container-home">
-        <h1>Home - Ecopoints</h1>
+        <h1>Dashboard - Ecopoints</h1>
       </div>
     </div>
 
   );
 }
 
-export default Home;
+export default Dashboard;

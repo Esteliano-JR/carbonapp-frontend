@@ -1,29 +1,44 @@
 header {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    align-self: auto;
+    
+    justify-content: center;
 
-    width: 100vw;
-    height: 64px;
+    
+    height: 30px;
 
     padding: 16px;
 
-    background-color: rgba(42, 170, 42, 0.932);
+    background-color: rgba(28, 143, 72, 0.986);
+}
+
+h2 {
+    color: white;
+}
+
+.recicla {
+    padding-right: 10px;
 }
 
 header > div {
     display: flex;
-    gap: 8px;
+    gap: 40px;
+    
+    
 }
+
 
 header > div > a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.856);
+    padding-top: 7.5px;
+    
   
 }
 
 header > div > a:hover {
-    color: gray;
-    text-decoration: underline;
+    color: rgba(125, 170, 136, 0.719);
+    text-decoration: none;
 }
