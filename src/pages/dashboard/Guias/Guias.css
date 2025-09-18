@@ -1,0 +1,48 @@
+.back-guia {
+    text-align: center;
+    background-color: rgb(31, 138, 232);
+    margin-bottom: 1rem;
+    height: auto;
+    justify-content: center;
+    display: block;
+}
+
+.guia-text {
+    padding-top: 4em;
+    font-size: 14px;
+
+}
+
+.div-center {
+    justify-self: center;
+    background-color: yellowgreen;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    width: 80%;
+    height: auto;
+}
+
+.guia {
+    padding: 20px;
+    margin: 12px;
+    background-color: aqua;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 17em;
+    height: 25em;
+    display: flex;
+}
+.guia-baixo {
+    padding: 20px;
+    margin: 12px;
+    background-color: aqua;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 17em;
+    height: 25em;
+    display: block
+    ;
+}
