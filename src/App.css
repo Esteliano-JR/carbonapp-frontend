@@ -5,3 +5,8 @@
   text-shadow: #000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+

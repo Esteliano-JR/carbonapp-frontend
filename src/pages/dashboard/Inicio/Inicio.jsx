@@ -4,7 +4,7 @@ import Logo from '../../img/lixeiras.jpeg';
 
 function Inicio() {
   return (
-    <div id="heroi">
+    <main id="heroi">
 
       <div className="dash-logo">
         <div className="dash-contet">
@@ -38,7 +38,7 @@ function Inicio() {
           <img className="dash-img" src={Logo} alt="" />
         </div>
       </div>
-    </div>
+    </main>
 
   );
 }

@@ -91,6 +91,7 @@
 
 .dash-cmc:hover {
     background-color: rgba(28, 143, 72, 0.986);;
+    transition: background-color 0.3s ease;
 }
 
 .dash-guia {

@@ -1,48 +1,127 @@
-.back-guia {
-    text-align: center;
-    background-color: rgb(31, 138, 232);
+#back-guia {
+    background-color: #F9FAFB;
     margin-bottom: 1rem;
     height: auto;
     justify-content: center;
     display: block;
 }
 
+.guia-h {
+    margin: 16px;
+}
+
+.guia-p {
+    justify-self: center;
+    width: 35em;
+    font-size: 16px;
+}
+
 .guia-text {
-    padding-top: 4em;
+    text-align: center;
+    padding-top: 3em;
     font-size: 14px;
 
 }
 
 .div-center {
+    
     justify-self: center;
-    background-color: yellowgreen;
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
-    width: 80%;
-    height: auto;
+    width: 58em;
+    height: 61em;
+    margin-bottom: 30px;
+}
+
+.guia-img {
+    width: 15em;
+    height: 12em;
+    border-radius: 8%;
+    
+}
+
+.guia-img-div {
+    height: 12em;
+    
+}
+
+.guia-conteudo {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.guia-conteudo > div > h3 {
+    font-size: 18px;
+}
+
+.guia-conteudo-2 {
+    width: 100%;
+    list-style-position: inside;
+}
+
+.guia-conteudo-2 > ul {
+    padding: 6px 0px;
+    font-size: 13px;
+}
+
+.guia-conteudo-2 > ul > li {
+    display: flex;
+    text-align: flex-start;
+    text-align: start;
+    gap: 8px;
+}
+
+.guia-conteudo-2 ul li::before {
+    content: "✔";
+    color: #00A63E;
+}
+
+
+.guia-conteudo-2 > h3 {
+    font-size: 15px;
 }
 
 .guia {
     padding: 20px;
     margin: 12px;
-    background-color: aqua;
-    justify-content: space-between;
+    background-color: #FFFFFF;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 17em;
-    height: 25em;
+    border-radius: 15px;
+    width: 15em;
+    height: 27em;
     display: flex;
+    flex-wrap: wrap;
 }
-.guia-baixo {
-    padding: 20px;
-    margin: 12px;
-    background-color: aqua;
-    justify-content: space-between;
+
+.guia-pts {
+    align-content: center;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #DBFCE7;
+    height: 20px;
+    width: 7em;
+    background-color: #DBFCE7;
+    border-radius: 8px;
+    color: #01663C;
+}
+
+.guia-exe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-top: 6px;
+}
+
+.guia-exe > div{
     border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 17em;
-    height: 25em;
-    display: block
-    ;
+    font-size: 11px;
+    padding: 0px 3px;
+    border-radius: 4px;
+}
+
+.guia:hover {
+    box-shadow: 0 9px 20px #ccc;
+    transition: box-shadow 0.5s ease;
 }

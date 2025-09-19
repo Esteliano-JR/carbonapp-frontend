@@ -1,3 +1,4 @@
+
 header {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -30,15 +31,17 @@ header > div {
 }
 
 
-header > div > a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.856);
-    padding-top: 7.5px;
+header > div > nav {
     
-  
+    padding-top: 7.5px;
 }
 
-header > div > a:hover {
+header > div > nav > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.856);
+}
+
+header > div > nav > a:hover {
     color: rgba(125, 170, 136, 0.719);
     text-decoration: none;
 }
