@@ -1,4 +1,6 @@
 import { FaLeaf, FaReceipt, FaCar, FaTruck } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 import "./Inicio.css"
 import Logo from '../../img/lixeiras.jpeg';
 
@@ -16,13 +18,19 @@ function Inicio() {
           </div>
           <div className="top">
               <p>
-                <FaLeaf className="Leaf"/>Sustentável
+                <FaLeaf className="Leaf"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Práticas que ajudam o meio ambiente"/>Sustentável
               </p>
               <p>
-                <FaReceipt className="Leaf"/> Recompensas
+                <FaReceipt className="Leaf"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Ganhe pontos e descontos nas contas"/> Recompensas
               </p>
               <p>
-                <FaTruck className="Leaf"/>Coleta Grátis
+                <FaTruck className="Leaf"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Nossos parceiros recolhem em sua casa"/>Coleta Grátis
               </p>
           </div>
           <div className="botoes">
@@ -30,7 +38,7 @@ function Inicio() {
               <a className="dash-cmc" href="#">Começar agora</a>
             </div>
             <div className="dash-guia">
-              <a href="#">Ver Guias</a>
+              <a href="#back-guia">Ver Guias</a>
             </div>
           </div>
         </div>
@@ -38,6 +46,8 @@ function Inicio() {
           <img className="dash-img" src={Logo} alt="" />
         </div>
       </div>
+      {/* Tooltip global */}
+      <Tooltip id="tooltip" place="top" effect="solid" />
     </main>
 
   );
