@@ -1,4 +1,10 @@
-function Agendamento() {
-  return <h1>Agendamento - Ecopoints</h1>;
+function Agendamento () {
+    return (
+        <main>
+            <div id="Agendar">
+                Agende Sua Coleta
+            </div>
+        </main>
+    );
 }
 export default Agendamento;
