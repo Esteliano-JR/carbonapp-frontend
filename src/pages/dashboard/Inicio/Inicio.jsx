@@ -1,4 +1,4 @@
-import { FaLeaf, FaReceipt, FaCar, FaTruck } from "react-icons/fa";
+import { FaLeaf, FaReceipt, FaTruck } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import "./Inicio.css"

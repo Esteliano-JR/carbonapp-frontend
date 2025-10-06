@@ -1,0 +1,83 @@
+#Backpontos {
+    background-color: rgb(201, 31, 31);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: auto;
+    
+
+}
+
+.Cabecapontos {
+    margin-top: 3em;
+    background-color: blue;
+    width: 100%;
+    justify-items: center;
+}
+
+.Divpontos {
+    margin: 10px;
+}
+
+.Pontos {
+    background-color: #00C64F;
+    border: 1px solid #00C64F;
+    border-radius: 8px;
+    text-align: left;
+    height: 10em;
+    width: 50%;
+    min-width: 10em;
+    max-width: 49em;
+    margin: 30px 0px;
+}
+
+.Textopontos > div > p {
+    color: white;
+    
+}
+
+.Textopontos {
+    display: flex;
+    background-color: yellowgreen;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.Tpontos {
+    font-size: 14px;
+    color: white;
+}
+
+.Quantpontos {
+    width: 100%;
+}
+
+.Basedescont {
+    background-color: chocolate;
+    width: 50%;
+    max-width: 49em;
+}
+
+.Desconto {
+    background-color: teal;
+    border-radius: 8px;
+    width: 15em;
+}
+
+.Indesconto {
+    padding: 8px;
+    display: flex;
+    text-align: left;
+}
+
+.Icondescont {
+    background-color: coral;
+    width: 2.9em;
+    height: 2.1em;
+    text-align: center;
+    color: #00C64F;
+}
+
+.Icondescont > FaBolt {
+
+}
