@@ -1,0 +1,118 @@
+.parceiros-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FFFFFF;
+  font-family: "Arial", sans-serif;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.subtitulo {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.beneficio-card {
+  background: #fff;
+  padding: 20px; 
+  width: 279px; 
+}
+
+.beneficio-icon {
+  font-size: 1.8rem;
+  color: #16a34a;
+  margin-bottom: 10px;
+ 
+}
+
+.empresas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 70em;
+  justify-self: center;
+}
+
+.empresa-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.empresa-card:hover {
+  transform: translateY(-4px);
+}
+
+.empresa-icon {
+  font-size: 1.5rem;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.green { color: #16a34a; }
+.blue { color: #2563eb; }
+.orange { color: #f97316; }
+.yellow { color: #facc15; }
+.lightblue { color: #38bdf8; }
+.purple { color: #7c3aed; }
+
+.categoria {
+  font-weight: bold;
+  margin: 4px 0;
+  color: #334155;
+}
+
+.estrela {
+  color: #facc15;
+  margin-left: 4px;
+}
+
+.parceria-box {
+  background: #d1fae5;
+  margin: 50px auto 0;
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.btn-parceiro {
+  margin-top: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-parceiro:hover {
+  background: #15803d;
+}
+
+.telefone {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #065f46;
+}

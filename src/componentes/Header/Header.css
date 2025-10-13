@@ -2,46 +2,66 @@
 header {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    text-align: center;
     align-self: auto;
-    
     justify-content: center;
 
-    
-    height: 30px;
-
+    height: 20px;
     padding: 16px;
 
     background-color: rgba(28, 143, 72, 0.986);
 }
 
-h2 {
-    color: white;
-}
-
 .recicla {
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
-header > div {
+.Header-logo {
+    color: white;
+    align-self: center;
+}
+
+.Header-conteudo {
     display: flex;
+    width: 70em;
+    justify-content: space-between;
+    
+}
+
+.Header-nav {
     gap: 40px;
-    
-    
+    display: flex;
 }
 
-
-header > div > nav {
-    
-    padding-top: 7.5px;
+.Header-nav > nav {
+    align-self: center;
 }
 
-header > div > nav > a {
+.Header-nav > nav > a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.856);
+    font-size: 15px;
 }
 
-header > div > nav > a:hover {
+.Header-nav > nav > a:hover {
     color: rgba(125, 170, 136, 0.719);
     text-decoration: none;
 }
+
+.Header-pontos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.Header-pontos > div {
+    font-size: 11px;
+    border: 1px solid #7ec496;
+    width: 8em;
+    height: 17px;
+    text-align: center;
+    align-content: center;
+    border-radius: 8px;
+    background-color: #7ec496;
+}
+
