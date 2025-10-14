@@ -1,4 +1,4 @@
-body {
+.cad-conteudo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,16 @@ body {
   background: #f5f5f5; 
   font-family: Arial, sans-serif;
   margin: 0;
+  justify-self: center;
+
+  width: 101em;
 }
+
+body {
+  background-color: #f5f5f5;
+}
+
+
 
 
 .Leaf {

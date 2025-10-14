@@ -45,6 +45,7 @@ header {
 .Header-nav > nav > a:hover {
     color: rgba(125, 170, 136, 0.719);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .Header-pontos {
@@ -63,5 +64,29 @@ header {
     align-content: center;
     border-radius: 8px;
     background-color: #7ec496;
+}
+
+.Header-usuario {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+
+    width: 20px;
+    height: 20px;
+
+    font-size: 10px;
+
+    background-color: #7EC496;
+    color: white;
+
+    border: 1px solid #7EC496;
+    border-radius: 6px;
+}
+
+.Header-usuario:hover {
+    background-color: rgba(125, 170, 136, 0.719);
+    transition: background-color 0.3s ease;
 }
 

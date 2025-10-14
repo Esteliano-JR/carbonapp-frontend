@@ -24,7 +24,7 @@ function Header() {
 
             <div className="Header-pontos">
                 <div>Pontos: "1,250"</div>
-                <FaUser/>
+                    <a className="Header-usuario" href="/Usuario"><FaUser/></a>
             </div>
         </div>
     </header>

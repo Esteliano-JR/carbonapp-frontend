@@ -18,8 +18,6 @@ function Dashboard() {
       <Agendamento/>
       <Parceiros/>
       <Footer/>
-
-      
     </div>
 
   );

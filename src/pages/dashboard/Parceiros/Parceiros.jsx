@@ -10,7 +10,7 @@ function Parceiros () {
         Trabalhamos com empresas confiáveis para garantir a melhor experiência
       </p>
 
-      <div className="beneficios">
+      <div className="Parceiros-beneficios">
         <div className="beneficio-card">
           <FaRecycle className="beneficio-icon" />
           <h3>Coleta Gratuita</h3>
