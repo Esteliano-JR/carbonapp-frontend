@@ -2,46 +2,91 @@
 header {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    text-align: center;
     align-self: auto;
-    
     justify-content: center;
 
-    
-    height: 30px;
-
+    height: 20px;
     padding: 16px;
 
     background-color: rgba(28, 143, 72, 0.986);
 }
 
-h2 {
+.recicla {
+    padding-right: 8px;
+}
+
+.Header-logo {
+    color: white;
+    align-self: center;
+}
+
+.Header-conteudo {
+    display: flex;
+    width: 70em;
+    justify-content: space-between;
+    
+}
+
+.Header-nav {
+    gap: 40px;
+    display: flex;
+}
+
+.Header-nav > nav {
+    align-self: center;
+}
+
+.Header-nav > nav > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.856);
+    font-size: 15px;
+}
+
+.Header-nav > nav > a:hover {
+    color: rgba(125, 170, 136, 0.719);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Header-pontos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
 }
 
-.recicla {
-    padding-right: 10px;
+.Header-pontos > div {
+    font-size: 11px;
+    border: 1px solid #7ec496;
+    width: 8em;
+    height: 17px;
+    text-align: center;
+    align-content: center;
+    border-radius: 8px;
+    background-color: #7ec496;
 }
 
-header > div {
+.Header-usuario {
     display: flex;
-    gap: 40px;
     
+    align-items: center;
+    justify-content: center;
     
+
+    width: 20px;
+    height: 20px;
+
+    font-size: 10px;
+
+    background-color: #7EC496;
+    color: white;
+
+    border: 1px solid #7EC496;
+    border-radius: 6px;
 }
 
-
-header > div > nav {
-    
-    padding-top: 7.5px;
+.Header-usuario:hover {
+    background-color: rgba(125, 170, 136, 0.719);
+    transition: background-color 0.3s ease;
 }
 
-header > div > nav > a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.856);
-}
-
-header > div > nav > a:hover {
-    color: rgba(125, 170, 136, 0.719);
-    text-decoration: none;
-}

@@ -1,0 +1,9 @@
+.Usuario-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    width: 99.2vw;
+    min-height: calc(100vh - 60px);
+}

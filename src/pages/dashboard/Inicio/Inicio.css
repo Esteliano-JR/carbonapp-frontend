@@ -1,42 +1,55 @@
 #heroi {
     text-align: center;
     padding-top: 65px;
-    background: #fbfffc;
     height: 24em;
-    
+
+    justify-content: center;
+    background-color: #F9FEFA;
 }
 
-.fr-efeito > span {
+.fr-efeito > h1 > span {
     color: rgb(3, 163, 3);
 }
 
 .fr-contet {
+    width: 35em;
+
     text-align: left;
-    width: 65%;
+    justify-self: left;
     
+
+    margin: 20px 0px;
+
+}
+
+.fr-contet > p {
     font-size: 17px;
-    
-    justify-self: center;
-    padding: 15px;
-    
 }
 
 .dash-logo {
     display: flex;
+
+    width: 70em;
+    justify-content: space-between;
+
 }
 
 .dash-contet {
     width: 50%;
-
-    padding-left: 60px;
 }
 
 .fr-efeito {
     text-align: left;
-    justify-self: center;
-    width: 65%;
-    font-size: 40px;
+    justify-self: right;
     
+
+    width: 35em;
+    
+}
+
+.fr-efeito > h1 {
+    font-weight: bolder;
+    font-size: 2.7em;
 }
 
 .dash-img {
@@ -48,31 +61,43 @@
 }
 
 .div-img {
-    width: 50%;
-    height: auto;
-    height: 100%;
+    align-content: center;
+    
+    width: 31em;
+    height: 20em;
+    border-radius: 200px;
+
+    background-color: #DCFCE7;
+    margin-right: 30px;
+}
+
+.div-img > img {
+    width: 28em;
+    border-radius: 8px;
+    height: 17.5em;
 }
 
 .top {
     display: flex;
-    gap: 80px;
-    justify-self: center;
-    padding-top: 20px;
+    gap: 120px;
     
-    width: 70%;
-    font-size: 12px;
-    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    
+}
+
+.top > p {
+    font-size: 15px;
 }
 
 .botoes {
     display: flex;
-    justify-self: center;
     padding-top: 20px;
-    width: 68%;  
+    width: 35em;  
 }
 
 .botoes > div {
-    padding: 10px 10px 10px 10px;
+    padding: 0px 10px 10px 0px;
     
 }
 
@@ -87,6 +112,7 @@
 .dash-cmc {
     background-color: rgba(49, 196, 105, 0.986);
     color: #fbfffc;
+    width: 30px;
 }
 
 .dash-cmc:hover {
@@ -95,5 +121,10 @@
 }
 
 .dash-guia {
-  color: #ccc;
+  color: black;
+}
+
+.dash-guia:hover {
+    background-color: rgba(231, 224, 224, 0.788);
+    transition: background-color 0.3s ease;
 }

@@ -2,7 +2,7 @@ import {Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import Dashboard from "./pages/dashboard";
-import Perfil from "./pages/Perfil";
+import Usuario from "./pages/Perfil/Usuario";
 import Pontos from "./pages/Pontos";
 import Agendamento from "./pages/Agendamento";
 
@@ -12,8 +12,8 @@ function MainRoutes() {
         <Routes>
             <Route path="/" element={<Login />}/>
             <Route path="/Cadastro" element={<Cadastro />}/>
-            <Route path="/dashboard" element={<Dashboard />}/>
-            <Route path="/Perfil" element={<Perfil />}/>
+            <Route path="/Dashboard" element={<Dashboard />}/>
+            <Route path="/Usuario" element={<Usuario />}/>
             <Route path="/Pontos" element={<Pontos />}/>
             <Route path="/Agendamento" element={<Agendamento />}/>
 
@@ -21,4 +21,4 @@ function MainRoutes() {
     )
 }
 
-export default MainRoutes
+export default MainRoutes;

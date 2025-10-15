@@ -3,8 +3,10 @@ import Header from "../../componentes/Header/Header";
 import "./style.css"
 import Inicio from "./Inicio/Inicio";
 import Guia from "./Guias/Guias";
-import { BiColor } from "react-icons/bi";
 import Pontos from "./Pontos/Pontos";
+import Agendamento from "./Agendamento/Agendamento.jsx";
+import Parceiros from "./Parceiros/Parceiros.jsx";
+import Footer from "../../componentes/Footer/Footer.jsx";
 
 function Dashboard() {
   return (
@@ -13,10 +15,9 @@ function Dashboard() {
       <Inicio/>
       <Guia/>
       <Pontos/>
-
-      <div className="container-home">
-        <h1>Dashboard - Ecopoints</h1>
-      </div>
+      <Agendamento/>
+      <Parceiros/>
+      <Footer/>
     </div>
 
   );

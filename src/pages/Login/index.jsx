@@ -28,7 +28,7 @@ function Login() {
   }
 
   return (
-    <main>
+    <main className="body">
       <div className="lado-imagem">
         <img src={Logo} alt="imagem de reciclagem" />
       </div>

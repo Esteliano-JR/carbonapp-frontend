@@ -1,8 +1,7 @@
 import "./Header.css"
 import React from "react";
-import { FaLeaf, FaRecycle } from "react-icons/fa";
-import Inicio from "../../pages/dashboard/Inicio/Inicio";
-import Guia from "../../pages/dashboard/Guias/Guias"
+import { FaLeaf, FaUser } from "react-icons/fa";
+
 
 
 
@@ -10,13 +9,23 @@ function Header() {
   return (
     <header>
         
-        <div>
-            <h2><FaLeaf className="recicla"/>EcoPoints</h2>
-            <nav><a href="#heroi">Inicio</a></nav>
-            <nav><a href="#back-guia">Guias</a></nav>
-            <nav><a href="#Pontos">Pontos</a></nav>
-            <nav><a href="#Agendar">Agendar</a></nav>
-            <nav><a href="#Parceiros">Parceiros</a></nav>
+        <div className="Header-conteudo">
+            <div className="Header-logo">
+                <h2><FaLeaf className="recicla"/>EcoPoints</h2>
+            </div>
+
+            <div className="Header-nav">
+                <nav><a href="#heroi">Inicio</a></nav>
+                <nav><a href="#back-guia">Guias</a></nav>
+                <nav><a href="#Pontos">Pontos</a></nav>
+                <nav><a href="#Agendar">Agendar</a></nav>
+                <nav><a href="#Parceiros">Parceiros</a></nav>
+            </div>
+
+            <div className="Header-pontos">
+                <div>Pontos: "1,250"</div>
+                    <a className="Header-usuario" href="/Usuario"><FaUser/></a>
+            </div>
         </div>
     </header>
 );
