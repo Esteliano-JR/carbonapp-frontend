@@ -1,7 +1,60 @@
-import "../Pontos/Pontos.css"
-import { FaBolt, FaTint, FaGift} from "react-icons/fa";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "../Pontos/Pontos.css";
+import { FaBolt, FaTint, FaGift } from "react-icons/fa";
+import { jwtDecode } from "jwt-decode";
 
-function Pontos () {
+function Pontos() {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    return <p>Você precisa estar logado para visualizar seus pontos.</p>;
+  }
+
+  let decoded;
+  try {
+    decoded = jwtDecode(token);
+  } catch (err) {
+    return <p>Token inválido. Faça login novamente.</p>;
+  }
+
+  const usuarioId = decoded.id;
+
+
+const [dados, setDados] = useState(null);
+
+  useEffect(() => {
+    axios.get(`http://localhost:3000/pontos/${usuarioId}`)
+      .then(res => setDados(res.data))
+      .catch(err => console.error(err));
+  }, [usuarioId]);
+
+  if (!dados || !dados.impacto) return <p>Carregando...</p>;
+
+
+  const { pontos, meta, impacto } = dados;
+  const restante = meta - pontos;
+  const progresso = Math.min((pontos / meta) * 100, 100);
+
+   function handleResgate(tipo) {
+  axios.post("http://localhost:3000/resgatar", {
+    usuarioId,
+    tipo
+  }, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
+  .then(res => {
+    alert("Resgate realizado com sucesso!");
+    // opcional: atualizar pontos após resgate
+    setDados(prev => ({ ...prev, pontos: prev.pontos - res.data.custo }));
+  })
+  .catch(err => {
+    alert("Erro ao resgatar benefício");
+    console.error(err);
+  });
+}
     return (
         <main id="Backpontos">
             <div className="Cabecapontos">
@@ -22,11 +75,18 @@ function Pontos () {
                         
                                 <div>
                                     <p>
-                                        "1.250"
+                                        {pontos}
                                     </p>
-                                    <p className="Tpontos">
+                                    <p className="Tpontos">{pontos}/{meta}
                                         pontos
                                     </p>
+                                      <input className="Quantpontos" type="range" value={progresso} readOnly />
+                                        <p className="Tpontos">Falta {restante} pontos para o próximo nível</p>
+
+                                        <p className="Impactonum">{impacto.materialReciclado}</p>
+                                        <p className="Impactonum">{impacto.oleoColetado}</p>
+                                        <p className="Impactonum">{impacto.coletasRealizadas}</p>
+
                                 </div>
                             
                         </div>
@@ -36,13 +96,13 @@ function Pontos () {
                                     Processo para próxima recompensa
                                 </p>
                                 <p className="Tpontos">
-                                    "1250/1500"
+                                    {pontos}/{meta} pontos
                                 </p>
                             </div>
                             <div>
-                                <input className="Quantpontos" type="range" />
+                                <input className="Quantpontos" type="range" value={progresso} readOnly />
                                 
-                                <p className="Tpontos">Falta "250" pontos para o próximo nível</p>
+                                <p className="Tpontos">Falta {restante} pontos para o próximo nível</p>
                             </div>
                         </div>
                     </div>
@@ -68,7 +128,9 @@ function Pontos () {
                                 Reduz a conta de luz em até 15%
                             </p>
 
-                            <input type="button" value="Resgate" />
+                            <input type="button" value="Resgate" onClick={() => handleResgate("energia")} />
+
+
 
                         </div>
                     </div>
@@ -92,7 +154,7 @@ function Pontos () {
                                 Economize na conta de água até 10%
                             </p>
 
-                            <input type="button" value="Resgate" />
+                            <input type="button" value="Resgate" onClick={() => handleResgate("agua")} />
 
                         </div>
                     </div>
@@ -116,7 +178,7 @@ function Pontos () {
                                 vale de R$ 50 em supermercados parceiros
                             </p>
 
-                            <input type="button" value="Resgate" />
+                            <input type="button" value="Resgate" onClick={() => handleResgate("vale")} />
 
                         </div>
                     </div>
@@ -128,7 +190,7 @@ function Pontos () {
                             <div>
                                 <div>
                                     <p className="Impactonum" style={{color:"#16A34A"}}>
-                                        "15.2kg"
+                                        {impacto.materialReciclado}
                                     </p>
                                     <p className="Impactoitens">
                                         Material Reciclado
@@ -137,7 +199,7 @@ function Pontos () {
 
                                 <div>
                                     <p className="Impactonum" style={{color:"#2563EB"}}>
-                                        "8.5L"
+                                        {impacto.oleoColetado}
                                     </p>
                                      <p className="Impactoitens">
                                         Óleo Coletado
@@ -146,7 +208,7 @@ function Pontos () {
 
                                 <div>
                                     <p className="Impactonum" style={{color:"purple"}}>
-                                        "12"
+                                        {impacto.coletasRealizadas}
                                     </p>
                                      <p className="Impactoitens">
                                         Coletas realizadas

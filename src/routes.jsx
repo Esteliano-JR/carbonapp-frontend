@@ -12,7 +12,7 @@ function MainRoutes() {
         <Routes>
             <Route path="/" element={<Login />}/>
             <Route path="/Cadastro" element={<Cadastro />}/>
-            <Route path="/Dashboard" element={<Dashboard />}/>
+            <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/Perfil" element={<Perfil />}/>
             <Route path="/Pontos" element={<Pontos />}/>
             <Route path="/Agendamento" element={<Agendamento />}/>

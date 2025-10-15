@@ -20,8 +20,8 @@ function Login() {
 
     const data = await res.json();
     if (res.ok) {
-      localStorage.setItem("usuarioId", data.usuarioId); // ou token, se preferir
-      navigate("/Dashboard");
+      localStorage.setItem("token", data.token); // ou token, se preferir
+      navigate("/dashboard");
     } else {
       alert(data.error || "Erro ao fazer login");
     }
