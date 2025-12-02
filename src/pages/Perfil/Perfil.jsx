@@ -1,8 +1,32 @@
 import React from "react";
 import "./Perfil.css";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEdit, FaSignOutAlt } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import {jwtDecode} from "jwt-decode";
 
 export default function Perfil() {
+  const [usuario, setUsuario] = useState(null);
+const [impacto, setImpacto] = useState({});
+const [historico, setHistorico] = useState([]);
+
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  const { id } = jwtDecode(token);
+
+  axios.get(`http://localhost:3000/usuarios/${id}`)
+    .then(res => setUsuario(res.data))
+    .catch(err => console.error("Erro ao buscar perfil:", err));
+
+  axios.get(`http://localhost:3000/pontos/${id}`)
+    .then(res => setImpacto(res.data))
+    .catch(err => console.error("Erro ao buscar pontos:", err));
+
+  axios.get(`http://localhost:3000/reciclagem/${id}`)
+    .then(res => setHistorico(res.data))
+    .catch(err => console.error("Erro ao buscar histórico:", err));
+}, []);
+
   return (
     <div className="perfil-container">
       <a href="Dashboard" className="voltar-link">← Voltar para página inicial</a>
@@ -21,8 +45,8 @@ export default function Perfil() {
               alt="Avatar"
               className="perfil-avatar"
             />
-            <h3>Maria Silva</h3>
-            <p className="email">maria.silva@email.com</p>
+            <h3>{usuario?.name}</h3>
+            <p className="email">{usuario?.email}</p>
 
             <div className="info-detalhes">
               <p>
@@ -36,8 +60,8 @@ export default function Perfil() {
 
           <div className="impacto-box">
             <h4>🌎 Impacto Ambiental</h4>
-            <p>Total Reciclado: <strong>47 coletas</strong></p>
-            <p>Pontos Totais: <strong>2.850 pts</strong></p>
+            <p>Total Reciclado: <strong>{impacto?.coletasRealizadas} coletas</strong></p>
+            <p>Pontos Totais: <strong>{impacto?.pontos} pts</strong></p>
           </div>
 
           <div className="botoes">
@@ -50,10 +74,16 @@ export default function Perfil() {
         <div className="perfil-progresso">
           <div className="card-progresso">
             <h4>Total de Pontos</h4>
-            <p>Você tem <strong>1.250 pontos</strong> de 1.500 Pontos</p>
+            <p>Você tem <strong>{impacto?.pontos ?? 0} pontos</strong> de {impacto?.meta ?? 1500} Pontos</p>
 
             <div className="barra">
-              <div className="preenchimento" style={{ width: "57%" }}></div>
+              <div className="preenchimento"
+               style={{
+                 width: impacto?.meta
+                   ? `${Math.min((impacto.pontos / impacto.meta) * 100, 100)}%`
+                   : "0%"
+                 }}
+              ></div>
             </div>
 
             <div className="beneficios">
@@ -71,11 +101,14 @@ export default function Perfil() {
             <p>Suas últimas contribuições para o meio ambiente:</p>
 
             <ul className="historico-lista">
-              <li><span>Plástico</span> <span>10/10/2025</span> <span className="pts">+150 pts</span></li>
-              <li><span>Alumínio</span> <span>03/10/2025</span> <span className="pts">+200 pts</span></li>
-              <li><span>Papelão</span> <span>28/09/2025</span> <span className="pts">+120 pts</span></li>
-              <li><span>Vidro</span> <span>20/09/2025</span> <span className="pts">+180 pts</span></li>
-              <li><span>Óleo Usado</span> <span>15/09/2025</span> <span className="pts">+250 pts</span></li>
+              {historico.map((item, index) => (
+               <li key={index}>
+                <span>{item.material}</span>
+                <span>{item.data}</span>
+                <span className="pts">+{item.pontos} pts</span>
+               </li>
+              ))}
+
             </ul>
           </div>
         </div>

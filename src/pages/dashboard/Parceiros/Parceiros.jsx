@@ -4,7 +4,7 @@ import "./Parceiros.css";
 
 function Parceiros () {
   return (
-    <section className="parceiros-container">
+    <section id="parceiros-container">
       <h2 className="titulo">Nossos Parceiros</h2>
       <p className="subtitulo">
         Trabalhamos com empresas confiáveis para garantir a melhor experiência

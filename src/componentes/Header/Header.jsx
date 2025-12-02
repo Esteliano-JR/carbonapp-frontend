@@ -5,7 +5,7 @@ import { FaLeaf, FaUser } from "react-icons/fa";
 
 
 
-function Header() {
+function Header({ pontos }) {
   return (
     <header>
         
@@ -17,13 +17,13 @@ function Header() {
             <div className="Header-nav">
                 <nav><a href="#heroi">Inicio</a></nav>
                 <nav><a href="#back-guia">Guias</a></nav>
-                <nav><a href="#Pontos">Pontos</a></nav>
-                <nav><a href="#Agendar">Agendar</a></nav>
-                <nav><a href="#Parceiros">Parceiros</a></nav>
+                <nav><a href="#Backpontos">Pontos</a></nav>
+                <nav><a href="#agendamento-container">Agendar</a></nav>
+                <nav><a href="#parceiros-container">Parceiros</a></nav>
             </div>
 
             <div className="Header-pontos">
-                <div>Pontos: "1,250"</div>
+                <div>Pontos: <strong>{pontos ?? 0}</strong></div>
                     <a className="Header-usuario" href="/Usuario"><FaUser/></a>
             </div>
         </div>

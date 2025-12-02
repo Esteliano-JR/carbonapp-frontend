@@ -9,10 +9,14 @@
     margin-top: 3em;
     width: 100%;
     justify-items: center;
+    
 }
 
 .Divpontos {
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .Pontos {
@@ -25,17 +29,25 @@
     min-width: 10em;
     max-width: 49em;
     margin: 30px 0px;
+    display: flex;
 }
 
 .Textopontos > div > p {
     color: white;
     
+    
+}
+
+.Div-tpontos {
+    justify-content: space-between;
+    display: flex;
 }
 
 .Textopontos {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 38px;
+    margin-bottom: 49px;
+    width: 100%;
 }
 
 .Tpontos {
@@ -43,9 +55,14 @@
     color: white;
 }
 
+.Div-quantos {
+    width: 100%;
+}
+
 .Quantpontos {
     width: 100%;
 }
+
 
 .Basedescont {
     width: 50%;
@@ -58,7 +75,7 @@
 .Desconto {
     background-color: #F0FDF4;
     border-radius: 8px;
-    width: 15em;
+    width: 30.16%;
     border:1px solid #86EFAC;
 }
 

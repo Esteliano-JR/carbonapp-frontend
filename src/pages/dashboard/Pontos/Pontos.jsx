@@ -57,6 +57,7 @@ const [dados, setDados] = useState(null);
 }
     return (
         <main id="Backpontos">
+
             <div className="Cabecapontos">
                 <h1>Seus Pontos EcoPoints</h1>
                 <p>Troque seus pontos por benefícios reais nas suas contas</p>
@@ -77,33 +78,30 @@ const [dados, setDados] = useState(null);
                                     <p>
                                         {pontos}
                                     </p>
-                                    <p className="Tpontos">{pontos}/{meta}
+                                    <p className="Tpontos">
                                         pontos
-                                    </p>
-                                      <input className="Quantpontos" type="range" value={progresso} readOnly />
-                                        <p className="Tpontos">Falta {restante} pontos para o próximo nível</p>
-
-                                        <p className="Impactonum">{impacto.materialReciclado}</p>
-                                        <p className="Impactonum">{impacto.oleoColetado}</p>
-                                        <p className="Impactonum">{impacto.coletasRealizadas}</p>
-
+                                    </p> 
                                 </div>
                             
                         </div>
-                        <div>
-                            <div>
-                                <p className="Tpontos">
-                                    Processo para próxima recompensa
-                                </p>
-                                <p className="Tpontos">
+                        <div  className="Div-quantos">
+                            <div className="Div-tpontos">
+                                <div>
+                                    <p className="Tpontos">
+                                        Processo para próxima recompensa
+                                    </p>
+                                </div>
+                                <div className="Tpontos">
                                     {pontos}/{meta} pontos
-                                </p>
+                                </div>
                             </div>
-                            <div>
+                            <div >
+            
                                 <input className="Quantpontos" type="range" value={progresso} readOnly />
                                 
                                 <p className="Tpontos">Falta {restante} pontos para o próximo nível</p>
                             </div>
+                        
                         </div>
                     </div>
                 </div>
@@ -189,27 +187,27 @@ const [dados, setDados] = useState(null);
 
                             <div>
                                 <div>
-                                    <p className="Impactonum" style={{color:"#16A34A"}}>
+                                    <div className="Impactonum" style={{color:"#16A34A"}}>
                                         {impacto.materialReciclado}
-                                    </p>
+                                    </div>
                                     <p className="Impactoitens">
                                         Material Reciclado
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p className="Impactonum" style={{color:"#2563EB"}}>
+                                    <div className="Impactonum" style={{color:"#2563EB"}}>
                                         {impacto.oleoColetado}
-                                    </p>
+                                    </div>
                                      <p className="Impactoitens">
                                         Óleo Coletado
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p className="Impactonum" style={{color:"purple"}}>
+                                    <div className="Impactonum" style={{color:"purple"}}>
                                         {impacto.coletasRealizadas}
-                                    </p>
+                                    </div>
                                      <p className="Impactoitens">
                                         Coletas realizadas
                                     </p>
